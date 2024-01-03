@@ -1,86 +1,111 @@
+/* font-family: 'JetBrains Mono', monospace;
+font-family: 'Open Sans', sans-serif; */
+:root {
+  --white-color: #fff;
+  --gray-300: #c2c2c2;
+  --green-500: #00bfa6;
+  --purple-900: #2f2e41;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "JetBrains Mono", monospace;
-  background-color: #2f2e41;
-  margin: auto;
+  background-color: var(--purple-900);
+  color: var(--white-color);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .page {
-  width: 1200px;
-  margin: auto 0;
+  width: 1100px;
+  margin: 71px auto 0;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: normal;
 }
 
-ul {
-  list-style: none;
-  gap: 18px;
-  display: inherit;
-  font-family: JetBrains Mono;
-  font-size: 14px;
-  font-style: normal;
-  line-height: 28px; /* 200% */
-}
-
-ul li a {
-  text-decoration: none;
-  color: #fff;
-  margin: 40px;
-  gap: 907px;
-}
-
+nav,
+footer,
 h1 {
-  width: fit-content;
   font-family: "JetBrains Mono", monospace;
-  font-size: 36px;
-  font-style: normal;
-  color: #fff;
-  flex-shrink: 0;
-  justify-content: space-between;
-  margin-inline-start: 700px;
-  height: 60px;
+}
+
+nav ul {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  list-style: none;
+}
+
+section {
+  margin: 100px auto 157px;
+  display: flex;
+  gap: 82px;
 }
 
 main {
-  justify-content: space-between;
-  align-items: center;
-}
-
-span {
-  color: #00bfa6;
-  font-weight: bold;
-}
-
-strong {
-  font-weight: bold;
-}
-
-p {
-  color: #c2c2c2;
-  margin: 10px 50px 50px 490px;
   text-align: center;
+}
+
+main h1 {
+  margin-bottom: 60px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+main h1 span {
+  color: var(--green-500);
+}
+
+main p {
   font-family: "Open Sans", sans-serif;
+  color: var(--gray-300);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px; /* 175% */
+  line-height: 28px;
 }
 
-a {
-  text-decoration: none;
-  align-items: center;
-  color: #fff;
+main p span {
+  color: var(--green-500);
+  font-weight: bold;
+}
+
+footer::before {
+  display: block;
+  width: 570px;
+  height: 1px;
+  background-color: var(--green-500);
+  content: "";
+  margin: 0 auto 27px;
 }
 
 footer {
-  font-family: "JetBrains Mono", monospace;
+  text-align: center;
+}
+
+.insta {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.insta:hover {
+  color: var(--green-500);
+}
+
+.lock {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
